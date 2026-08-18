@@ -223,3 +223,41 @@ GET /api/weather/Villupuram
   "alert": "Rain expected"
 }
 ```
+---
+
+## 5. Profit Calculation
+
+### Endpoint
+
+POST /api/profit
+
+### Request
+
+```json
+{
+  "production_kg": 1000,
+  "selling_price_per_kg": 60,
+  "cultivation_cost": 30000,
+  "transport_cost": 5000,
+  "other_cost": 3000
+}
+```
+
+### Response
+
+```json
+{
+  "gross_revenue": 60000,
+  "total_cost": 38000,
+  "net_profit": 22000
+}
+```
+
+### Calculation
+
+Gross Revenue = Production × Selling Price
+
+Total Cost = Cultivation Cost + Transport Cost + Other Cost
+
+Net Profit = Gross Revenue - Total Cost
+```
