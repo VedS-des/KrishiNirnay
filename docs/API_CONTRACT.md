@@ -114,3 +114,49 @@ POST /api/recommend
   "total_cost": 89000,
   "net_profit": -38000
 }
+---
+
+## 2. Crop Details
+
+### Endpoint
+
+GET /api/crop/{cropName}
+
+### Example
+
+GET /api/crop/Groundnut
+
+### Response
+
+```json
+{
+  "crop": "Groundnut",
+  "duration_days": 110,
+  "water_requirement": "Moderate",
+  "soil_types": [
+    "Red",
+    "Sandy Loam"
+  ],
+  "lifecycle": [
+    {
+      "day": 0,
+      "activity": "Sowing"
+    },
+    {
+      "day": 7,
+      "activity": "First irrigation"
+    },
+    {
+      "day": 25,
+      "activity": "Fertilizer application"
+    },
+    {
+      "day": 40,
+      "activity": "Pest monitoring"
+    },
+    {
+      "day": 110,
+      "activity": "Harvest"
+    }
+  ]
+}
