@@ -114,6 +114,8 @@ POST /api/recommend
   "total_cost": 89000,
   "net_profit": -38000
 }
+
+
 ---
 
 ## 2. Crop Details
