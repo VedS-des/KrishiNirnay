@@ -116,11 +116,6 @@ POST /api/recommend
 }
 ```
 
-then:
-
-```markdown
----
-
 ---
 
 ## 2. Crop Details
