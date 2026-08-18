@@ -1,21 +1,8 @@
 # KrishiNirnay
 AI-powered personalized farm decision support system for crop selection, risk management and market returns.
-## Problem
-
-Farmers need to make several interconnected decisions:
-
-- What crop should I grow?
-- When should I grow it?
-- How should I manage the crop?
-- What risks should I watch for?
-- Where should I sell my harvest?
-- What return can I expect?
-
-## Solution
-
-KrishiNirnay combines farm information, soil suitability, weather,
-market conditions, risk and estimated profitability to provide
-personalized crop recommendations.
+KrishiNirnay is a decision-support platform designed to help farmers
+select suitable crops, manage cultivation risks, and identify
+potentially better markets for selling their harvest.
 
 ## Core Flow
 
@@ -25,7 +12,7 @@ Crop Recommendation
 ↓
 Crop Management
 ↓
-Risk & Weather
+Weather & Risk
 ↓
 Market Comparison
 ↓
@@ -33,8 +20,10 @@ Expected Profit
 
 ## MVP Features
 
-- Farmer profile and farm details
-- Crop recommendation
+- Farmer and farm details
+- Soil-based crop recommendation
+- Season-based recommendation
+- Water availability analysis
 - Crop suitability score
 - Expected yield
 - Estimated cultivation cost
@@ -43,19 +32,40 @@ Expected Profit
 - Crop lifecycle
 - Weather/risk information
 - Market comparison
-- Best estimated market return
+
+## Technology
+
+- Java
+- Spring Boot
+- HTML
+- CSS
+- JavaScript
+- MySQL / H2
+- GitHub
+
+## Project Structure
+
+frontend/ → User interface
+
+backend/ → Java Spring Boot backend
+
+ai/ → Crop recommendation logic
+
+data/ → Crop, market and weather datasets
+
+docs/ → Project documentation
 
 ## Team
 
-| Member | Responsibility |
-|---|---|
-| Member 1 | Frontend Lead |
-| Member 2 | Frontend Developer |
-| Member 3 | Backend Developer |
-| Member 4 | AI / Recommendation |
-| Member 5 | Data / Agriculture |
-| Member 6 | Team Lead / Integration |
+| Member | Name | Responsibility |
+|---|---|---|
+| 1 | Nyasa Soni | Frontend Lead |
+| 2 | Ankit Gupta | Frontend Developer |
+| 3 | Shreyank Sarkar | Java Backend Developer |
+| 4 | Shunabha Ghosh | AI / Recommendation |
+| 5 | Arnav Chaudhary | Agriculture / Data |
+| 6 | Vedansh Shankar | Team Lead / Integration |
 
-## Project Status
+## Status
 
-🚧 MVP under development
+🚧 Under Development
