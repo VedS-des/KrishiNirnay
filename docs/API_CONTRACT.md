@@ -162,3 +162,39 @@ GET /api/crop/Groundnut
     }
   ]
 }
+```
+
+---
+
+## 3. Market Information
+
+### Endpoint
+
+GET /api/market/{cropName}
+
+### Example
+
+GET /api/market/Groundnut
+
+### Response
+
+```json
+{
+  "crop": "Groundnut",
+  "markets": [
+    {
+      "name": "Local Mandi",
+      "price_per_kg": 60,
+      "distance_km": 20,
+      "transport_cost": 3000,
+      "estimated_net_return": 120000
+    },
+    {
+      "name": "Chennai",
+      "price_per_kg": 68,
+      "distance_km": 180,
+      "transport_cost": 12000,
+      "estimated_net_return": 125000
+    }
+  ]
+}
