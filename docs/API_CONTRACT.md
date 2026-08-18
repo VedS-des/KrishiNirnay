@@ -198,3 +198,28 @@ GET /api/market/Groundnut
     }
   ]
 }
+```
+---
+
+## 4. Weather Information
+
+### Endpoint
+
+GET /api/weather/{location}
+
+### Example
+
+GET /api/weather/Villupuram
+
+### Response
+
+```json
+{
+  "location": "Villupuram",
+  "temperature": 29,
+  "rain_probability": 70,
+  "humidity": 78,
+  "risk": "Medium",
+  "alert": "Rain expected"
+}
+```
