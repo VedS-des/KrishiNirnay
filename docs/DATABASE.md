@@ -112,13 +112,118 @@ Used for:
 ## 7. RELATIONSHIPS
 
 ### CROPS → CROP_PLANS
-
 One crop can have multiple crop lifecycle activities.
 
 ```text
 CROPS
   |
   | crop_id
+  ↓
+CROP_PLANS
+```
+
+### CROPS → MARKET_PRICES
+
+One crop can have multiple market price records.
+
+```text
+CROPS
+  |
+  | crop_id
+  ↓
+MARKET_PRICES
+```
+
+### MARKETS → MARKET_PRICES
+
+One market can have prices for multiple crops.
+
+```text
+MARKETS
+  |
+  | market_id
+  ↓
+MARKET_PRICES
+```
+
+## 8. DATABASE RELATIONSHIP OVERVIEW
+
+```text
+                  ┌──────────────┐
+                  │    FARMS     │
+                  └──────────────┘
+
+
+                  ┌──────────────┐
+                  │    CROPS     │
+                  └──────┬───────┘
+                         │
+             ┌───────────┴───────────┐
+             │                       │
+             ↓                       ↓
+      ┌─────────────┐        ┌────────────────┐
+      │ CROP_PLANS  │        │ MARKET_PRICES  │
+      └─────────────┘        └───────┬────────┘
+                                      │
+                                      ↓
+                              ┌──────────────┐
+                              │   MARKETS    │
+                              └──────────────┘
+```
+
+## 9. EXTERNAL DATA
+
+### Weather
+
+Weather information will be obtained from an external weather API.
+
+```text
+Farmer Location
+      ↓
+Backend
+      ↓
+Weather API
+      ↓
+Current Weather Information
+      ↓
+KrishiNirnay
+```
+
+### Recommendation
+
+Crop recommendation will be generated using farmer inputs, crop data, and the AI/recommendation engine.
+
+```text
+Farmer Inputs
+      ↓
+Backend
+      ↓
+AI / Recommendation Engine
+      ↓
+Crop Suitability Score
+      ↓
+Top 3 Crop Recommendations
+```
+
+## 10. MVP DATABASE SCOPE
+
+The MVP database will contain:
+
+- Farm information
+- Crop information
+- Crop lifecycle information
+- Market information
+- Market price information
+
+The following will not be stored in the database for the initial MVP:
+
+- Real-time weather
+- AI model data
+- Payment information
+- International transactions
+- IoT sensor data
+- Drone data
+- Blockchain data
   ↓
 CROP_PLANS
 
