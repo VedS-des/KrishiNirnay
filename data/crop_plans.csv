@@ -5,15 +5,43 @@ Groundnut,30,Root rot management
 Groundnut,35,50% flowering / nutrient spray
 Groundnut,40,Gypsum application
 Groundnut,103,Harvest
-Black Gram,0,Sowing,Government of Tamil Nadu Agriculture Department - Crop Production Guide,https://tnagriculture.in/dashboard/CPG/04_Blackgram.pdf,"Source section 'SOWING OF SEEDS' states: 'For irrigated crop dibble the seeds adopting 30 x 10 cm spacing' and 'For rainfed crop dibble the seeds adopting 25 cm x 10 cm spacing.' Day 0 = sowing is our normalization convention; subsequent DAS figures are measured from sowing."
-Black Gram,20,Early crop establishment - hand weeding,Government of Tamil Nadu Agriculture Department - Crop Production Guide,https://tnagriculture.in/dashboard/CPG/04_Blackgram.pdf,"Source states one hand weeding at 20 DAS under the herbicide program. It also gives two hand weedings at 15 and 30 DAS when herbicides are not applied. 20 DAS selected as the representative early-weeding value."
-Black Gram,30,Fertilizer/nutrient management - foliar urea spray,Government of Tamil Nadu Agriculture Department - Crop Production Guide,https://tnagriculture.in/dashboard/CPG/04_Blackgram.pdf,"Source states that foliar spray of urea 1% is recommended at 30 and 45 DAS for yield improvement. 30 DAS selected as the representative first spray."
-Black Gram,30,Disease management - Root rot preventive soil application,Government of Tamil Nadu Agriculture Department - Crop Production Guide,https://tnagriculture.in/dashboard/CPG/04_Blackgram.pdf,"Source states: soil application of P. fluorescens or T. asperellum at 2.5 kg/ha with 50 kg of well-decomposed FYM or sand at 30 DAS for root rot management."
-Black Gram,45,Seed production - Brassinolide spray,Government of Tamil Nadu Agriculture Department - Crop Production Guide,https://tnagriculture.in/dashboard/CPG/04_Blackgram.pdf,"Source's seed-production guidance recommends 0.1% Brassinolide spray at 35 and 45 DAS to support seed set. This is source-supported as a seed-production activity; 45 DAS should not be interpreted as a universally verified flowering date for the commercial crop."
-Black Gram,68,Harvest,Government of Tamil Nadu Agriculture Department - Crop Production Guide,https://tnagriculture.in/dashboard/CPG/04_Blackgram.pdf,"Source gives variety-specific maturity durations ranging approximately from 60-75 days. The project's crops.csv records a representative Black Gram duration of 68 days, so 68 DAS is used here as a normalized harvest value. The exact 68-day harvest point is not directly stated by the source."
-Green Gram,0,Sowing,Government of Tamil Nadu Agriculture Department - Crop Production Guide,https://tnagriculture.in/dashboard/CPG/04_Greengram.pdf,"Source section 'SOWING' states: 'Dibble the seeds adopting a spacing of 30 x 10 cm. For bund crop dibble the seeds at 30 cm spacing.' Day 0 = sowing is our normalization convention; subsequent DAS figures are measured from sowing."
-Green Gram,30,Early crop establishment - hand weeding,Government of Tamil Nadu Agriculture Department - Crop Production Guide,https://tnagriculture.in/dashboard/CPG/04_Greengram.pdf,"Source under Weed Management states that one hand weeding at 30 DAS gives a weed-free environment through the crop period. It also gives 15 and 30 DAS as the two hand-weeding timings when herbicides are not applied. 30 DAS selected as the representative value."
-Green Gram,30,Fertilizer/nutrient management - foliar urea spray,Government of Tamil Nadu Agriculture Department - Crop Production Guide,https://tnagriculture.in/dashboard/CPG/04_Greengram.pdf,"Source states that foliar spray of urea 1% is recommended at 30 and 45 DAS for yield improvement. 30 DAS selected as the representative first spray."
-Green Gram,45,Seed production - Brassinolide spray,Government of Tamil Nadu Agriculture Department - Crop Production Guide,https://tnagriculture.in/dashboard/CPG/04_Greengram.pdf,"Source's Green Gram varietal seed-production guidance recommends 0.1% Brassinolide spray at 35 and 45 DAS. This is a seed-production recommendation and should not be interpreted as a universally verified flowering day for commercial Green Gram cultivation."
-Green Gram,30,Disease management - Root rot and Yellow Mosaic management,Government of Tamil Nadu Agriculture Department - Crop Production Guide,https://tnagriculture.in/dashboard/CPG/04_Greengram.pdf,"Source gives root rot preventive soil application at 30 DAS and also gives 10% Notchi leaf extract spray at 30 DAS for Yellow Mosaic management. 30 DAS is therefore used as the representative disease-management checkpoint."
-Green Gram,63,Harvest,Government of Tamil Nadu Agriculture Department - Crop Production Guide,https://tnagriculture.in/dashboard/CPG/04_Greengram.pdf,"Source gives variety-specific maturity durations ranging approximately from 55-75 days, with common varieties clustering around 60-70 days. The project's crops.csv records a representative Green Gram duration of 63 days, so 63 DAS is used as a normalized harvest value. The exact 63-day harvest point is not directly stated by the source."
+Black Gram,0,Sowing
+Black Gram,20,Early crop establishment - hand weeding
+Black Gram,30,Fertilizer/nutrient management - foliar urea spray
+Black Gram,30,Disease management - Root rot preventive soil application
+Black Gram,45,Seed production - Brassinolide spray
+Black Gram,68,Harvest
+Green Gram,0,Sowing
+Green Gram,30,Early crop establishment - hand weeding
+Green Gram,30,Fertilizer/nutrient management - foliar urea spray
+Green Gram,45,Seed production - Brassinolide spray
+Green Gram,30,Disease management - Root rot and Yellow Mosaic management
+Green Gram,63,Harvest
+Sesame,0,Sowing
+Sesame,25,Early crop establishment - weed management
+Sesame,30,Fertilizer/nutrient management
+Sesame,30,Pest/disease monitoring - Root rot management checkpoint
+Sesame,40,Important developmental stage - Flowering (critical moisture-demand phase)
+Sesame,83,Harvest
+Rice,0,Nursery sowing
+Rice,20,Transplanting - early crop establishment
+Rice,10,Fertilizer/nutrient management - Basal DAP and Gypsum (clayey soils)
+Rice,47,Important developmental stage - Panicle Initiation
+Rice,108,Harvest
+Maize,0,Sowing
+Maize,30,Early establishment - hoeing and hand-weeding
+Maize,25,Fertilizer/nutrient management - Nitrogen top dressing (first split)
+Maize,20,Pest/disease monitoring - Downy mildew/Crazy top management
+Maize,48,Important developmental stage - Flowering phase
+Maize,110,Harvest
+Cotton,0,Sowing
+Cotton,20,Early crop establishment - hoeing and hand weeding
+Cotton,40,Fertilizer/nutrient management - Nitrogen and Potassium top dressing
+Cotton,25,Pest/disease monitoring - Soil drenching (IPDM technology)
+Cotton,48,Important developmental stage - Flowering phase
+Sorghum,0,Sowing (direct sown crop)
+Sorghum,15,Early crop establishment - hand weeding
+Sorghum,15,Fertilizer/nutrient management - Nitrogen top dressing (second split)
+Sorghum,45,Pest/disease monitoring - Downy mildew rogueing checkpoint
+Sorghum,40,Important developmental stage - Flowering phase (copious-irrigation onset)
+Sorghum,100,Harvest
