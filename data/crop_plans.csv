@@ -46,3 +46,14 @@ Sorghum,15,Fertilizer/nutrient management - Nitrogen top dressing (second split)
 Sorghum,45,Pest/disease monitoring - Downy mildew rogueing checkpoint
 Sorghum,40,Important developmental stage - Flowering phase (copious-irrigation onset)
 Sorghum,100,Harvest
+Pearl Millet,0,Sowing
+Pearl Millet,15,Early crop establishment - hand weeding
+Pearl Millet,30,Fertilizer/nutrient management - nitrogen top dressing
+Pearl Millet,45,Important developmental stage - 50% flowering
+Pearl Millet,78,Harvest
+Finger Millet,0,Sowing
+Finger Millet,20,Transplanting - early crop establishment
+Finger Millet,30,Fertilizer/nutrient management - nitrogen split
+Finger Millet,45,Fertilizer/nutrient management - nitrogen split
+Finger Millet,72,Important developmental stage - 50% flowering
+Finger Millet,108,Harvest - representative crop duration
