@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Farm Details - KrishiNirnay</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <h1>🌱 Tell Us About Your Farm</h1>
+
+        <p> 
+            Enter your farm details to get the best crop recommendations.
+        </p>
+
+        <form id="farmForm">
+
+            <label>Farmer Name</label>
+            <input type="text" id="farmerName" placeholder="Enter your name" required>
+
+
+            <label>Location</label>
+            <input type="text" id="location" placeholder="Example: Tamil Nadu" required>
+
+
+            <label>Farm Area (acres)</label>
+            <input type="number" id="area" placeholder="Example: 5" required>
+
+
+            <label>Soil Type</label>
+            <select id="soil" required>
+                <option value="">Select soil type</option>
+                <option value="red">Red Soil</option>
+                <option value="black">Black Soil</option>
+                <option value="alluvial">Alluvial Soil</option>
+                <option value="sandy">Sandy Soil</option>
+                <option value="clay">Clay Soil</option>
+            </select>
+
+
+            <label>Soil pH</label>
+            <input type="number" id="ph" step="0.1" placeholder="Example: 6.5" required>
+
+
+            <label>Water Availability</label>
+            <select id="water" required>
+                <option value="">Select water availability</option>
+                <option value="low">Low</option>
+                <option value="medium">Moderate</option>
+                <option value="high">High</option>
+            </select>
+
+
+            <label>Budget (₹)</label>
+            <input type="number" id="budget" placeholder="Example: 150000" required>
+
+
+            <label>Season</label>
+            <select id="season" required>
+                <option value="">Select season</option>
+                <option value="kharif">Kharif</option>
+                <option value="rabi">Rabi</option>
+                <option value="summer">Summer</option>
+            </select>
+
+
+            <label>Previous Crop</label>
+            <input type="text" id="previousCrop"
+                   placeholder="Example: Groundnut" required>
+
+
+            <button type="submit">
+                🌱 Analyze My Farm
+            </button>
+
+        </form> 
+
+        <div id="recommendation" style="display: none;">
+
+    <h2>🌾 Crop Recommendation</h2>
+
+    <div class="recommendation-card">
+        <p id="recommendationText"></p>
+    </div> 
+                       
+</div>                                          
+ 
+    </div>
+  <script src="Dashboard.js"></script>
+</body>   
+</html>    
+

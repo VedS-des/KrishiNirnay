@@ -87,4 +87,250 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
+} 
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
 }
+
+.nav-logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2e8b57;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #2e8b57;
+} 
+/* SIGN UP PAGE */
+
+.signup-page {
+    min-height: 100vh;
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+/* LEFT FARMER SIDE */
+
+.farmer-side {
+    width: 50%;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.farmer-side img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.farmer-overlay {
+    position: absolute;
+    top: 18%;
+    left: 12%;
+    color: #245b2a;
+}
+
+.farmer-overlay h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.farmer-overlay p {
+    font-size: 22px;
+    line-height: 1.4;
+}
+
+/* RIGHT SIGNUP SIDE */
+
+.signup-side {
+    width: 50%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.signup-card {
+    width: 100%;
+    max-width: 520px;
+}
+
+.leaf-icon {
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 5px;
+}
+
+.signup-card h1 {
+    text-align: center;
+    font-size: 46px;
+    color: #245b2a;
+    margin: 0 0 15px;
+}
+
+.signup-text {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 35px;
+}
+
+.signup-text strong {
+    color: #2e7d32;
+}
+
+.signup-card label {
+    display: block;
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.signup-card input {
+    width: 100%;
+    height: 58px;
+    padding: 0 18px;
+    margin-bottom: 22px;
+    box-sizing: border-box;
+    border: 1px solid #d5d5d5;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+.signup-card input:focus {
+    border-color: #2e7d32;
+}
+
+.signup-card button {
+    width: 100%;
+    height: 58px;
+    border: none;
+    border-radius: 10px;
+    background: #286b2d;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.signup-card button:hover {
+    background: #1f5624;
+}
+
+.login-text {
+    text-align: center;
+    margin-top: 25px;
+    color: #777;
+    font-size: 16px;
+}
+
+.login-text a {
+    color: #2e7d32;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+    .signup-page {
+    flex-direction: column;
+    width: 100%;
+    overflow: auto;
+}
+    .farmer-side {
+    width: 100%;
+    height: 50vh;
+    min-height: 300px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.farmer-side img {
+    width: 100VW;
+    height: 50vh;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}    
+    .signup-side {
+    width: 100%;
+    min-height:auto;
+    padding: 30px 20px;
+    box-sizing: border-box;
+}
+    .farmer-overlay h1 {
+        font-size: 32px;
+    }
+
+    .farmer-overlay p {
+        font-size: 18px;
+    }
+} 
+.recommendation-card {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    background: #f0f8f0;
+    border: 2px solid #4caf50;
+}
+
+#recommendation h2 {
+    margin-top: 25px;
+} 
+/* CROP RECOMMENDATION */
+
+#recommendation {
+    margin-top: 30px;
+}
+
+#recommendation h2 {
+    color: #1b5e20;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.recommendation-card {
+    background-color: #ffffff;
+    border: 2px solid #4caf50;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.recommendation-card p {
+    font-size: 17px;
+    line-height: 1.8;
+}
+ 
+.recommendation-card strong {
+    color: #2e7d32;
+}
+
+
