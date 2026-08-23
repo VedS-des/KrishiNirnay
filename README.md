@@ -59,12 +59,12 @@ docs/ → Project documentation
 
 | Member | Name | Responsibility |
 |---|---|---|
-| 1 | Nyasa Soni | Frontend Lead |
-| 2 | Ankit Gupta | Frontend Developer |
-| 3 | Shreyank Sarkar | Java Backend Developer |
-| 4 | Shunabha Ghosh | AI / Recommendation |
-| 5 | Arnav Chaudhary | Agriculture / Data |
-| 6 | Vedansh Shankar | Team Lead / Integration |
+| 1 | Vedansh Shankar | Team Lead / Integration |
+| 2 | Nyasa Soni | Frontend Lead |
+| 3 | Ankit Gupta | Frontend Developer |
+| 4 | Shreyank Sarkar | Java Backend Developer |
+| 5 | Sunabha Ghosh | AI / Recommendation |
+| 6 | Arnav Chaudhary | Agriculture / Data |
 
 ## Status
 

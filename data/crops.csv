@@ -1,0 +1,11 @@
+crop,soil_type,water_requirement,season,duration_days,estimated_cost,expected_yield
+Groundnut,red;sandy;loamy,moderate,kharif;rabi;zaid,103,33288,546
+Black Gram,black,low,kharif;rabi;zaid,68,16817,225
+Green Gram,red;sandy;loamy,moderate,kharif;rabi;zaid,63,11542,142
+Sesame,black;alluvial,low,kharif;rabi;zaid,83,24296,276
+Rice,alluvial;red;black;loamy,high,kharif;rabi;zaid,108,34832,1858
+Maize,red;black;sandy;loamy,moderate,kharif;rabi;zaid,110,32209,1759
+Cotton,black;red;sandy;loamy,moderate,kharif;rabi;zaid,138,46998,694
+Sorghum,red;black;sandy;loamy,low,kharif;rabi;zaid,100,20994,493
+Pearl Millet,black,low,kharif;rabi;zaid,78,NOT VERIFIED,1096
+Finger Millet,black;red;sandy;loamy,moderate,kharif;rabi;zaid,108,NOT VERIFIED,1131
