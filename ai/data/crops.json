@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Groundnut",
+    "soil_types": ["red", "sandy", "loamy"],
+    "ph_min": 6.0,
+    "ph_max": 7.5,
+    "water_requirement": "medium",
+    "seasons": ["kharif", "rabi"],
+    "duration_days": 110,
+    "cost_per_acre": 15000
+  },
+  {
+    "name": "Rice",
+    "soil_types": ["clay", "loamy", "alluvial"],
+    "ph_min": 5.5,
+    "ph_max": 7.0,
+    "water_requirement": "high",
+    "seasons": ["kharif", "rabi"],
+    "duration_days": 120,
+    "cost_per_acre": 22000
+  },
+  {
+    "name": "Black Gram",
+    "soil_types": ["loamy", "sandy", "red"],
+    "ph_min": 6.0,
+    "ph_max": 7.5,
+    "water_requirement": "low",
+    "seasons": ["kharif", "rabi"],
+    "duration_days": 90,
+    "cost_per_acre": 10000
+  },
+  {
+    "name": "Maize",
+    "soil_types": ["loamy", "sandy", "alluvial"],
+    "ph_min": 5.5,
+    "ph_max": 7.5,
+    "water_requirement": "medium",
+    "seasons": ["kharif", "rabi"],
+    "duration_days": 100,
+    "cost_per_acre": 18000
+  },
+  {
+    "name": "Sesame",
+    "soil_types": ["red", "sandy", "loamy"],
+    "ph_min": 5.5,
+    "ph_max": 8.0,
+    "water_requirement": "low",
+    "seasons": ["kharif", "rabi"],
+    "duration_days": 90,
+    "cost_per_acre": 9000
+  }
+]
