@@ -1,0 +1,59 @@
+crop,day,activity
+Groundnut,0,Sowing
+Groundnut,20,Weeding/hoeing
+Groundnut,30,Root rot management
+Groundnut,35,50% flowering / nutrient spray
+Groundnut,40,Gypsum application
+Groundnut,103,Harvest
+Black Gram,0,Sowing
+Black Gram,20,Early crop establishment - hand weeding
+Black Gram,30,Fertilizer/nutrient management - foliar urea spray
+Black Gram,30,Disease management - Root rot preventive soil application
+Black Gram,45,Seed production - Brassinolide spray
+Black Gram,68,Harvest
+Green Gram,0,Sowing
+Green Gram,30,Early crop establishment - hand weeding
+Green Gram,30,Fertilizer/nutrient management - foliar urea spray
+Green Gram,45,Seed production - Brassinolide spray
+Green Gram,30,Disease management - Root rot and Yellow Mosaic management
+Green Gram,63,Harvest
+Sesame,0,Sowing
+Sesame,25,Early crop establishment - weed management
+Sesame,30,Fertilizer/nutrient management
+Sesame,30,Pest/disease monitoring - Root rot management checkpoint
+Sesame,40,Important developmental stage - Flowering (critical moisture-demand phase)
+Sesame,83,Harvest
+Rice,0,Nursery sowing
+Rice,20,Transplanting - early crop establishment
+Rice,10,Fertilizer/nutrient management - Basal DAP and Gypsum (clayey soils)
+Rice,47,Important developmental stage - Panicle Initiation
+Rice,108,Harvest
+Maize,0,Sowing
+Maize,30,Early establishment - hoeing and hand-weeding
+Maize,25,Fertilizer/nutrient management - Nitrogen top dressing (first split)
+Maize,20,Pest/disease monitoring - Downy mildew/Crazy top management
+Maize,48,Important developmental stage - Flowering phase
+Maize,110,Harvest
+Cotton,0,Sowing
+Cotton,20,Early crop establishment - hoeing and hand weeding
+Cotton,40,Fertilizer/nutrient management - Nitrogen and Potassium top dressing
+Cotton,25,Pest/disease monitoring - Soil drenching (IPDM technology)
+Cotton,48,Important developmental stage - Flowering phase
+Cotton,138,Harvest
+Sorghum,0,Sowing (direct sown crop)
+Sorghum,15,Early crop establishment - hand weeding
+Sorghum,15,Fertilizer/nutrient management - Nitrogen top dressing (second split)
+Sorghum,45,Pest/disease monitoring - Downy mildew rogueing checkpoint
+Sorghum,40,Important developmental stage - Flowering phase (copious-irrigation onset)
+Sorghum,100,Harvest
+Pearl Millet,0,Sowing
+Pearl Millet,15,Early crop establishment - hand weeding
+Pearl Millet,30,Fertilizer/nutrient management - nitrogen top dressing
+Pearl Millet,45,Important developmental stage - 50% flowering
+Pearl Millet,78,Harvest
+Finger Millet,0,Sowing
+Finger Millet,20,Transplanting - early crop establishment
+Finger Millet,30,Fertilizer/nutrient management - nitrogen split
+Finger Millet,45,Fertilizer/nutrient management - nitrogen split
+Finger Millet,72,Important developmental stage - 50% flowering
+Finger Millet,108,Harvest - representative crop duration
