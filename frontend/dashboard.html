@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +16,7 @@
 
         <h1>🌱 Tell Us About Your Farm</h1>
 
-        <p> 
+        <p>
             Enter your farm details to get the best crop recommendations.
         </p>
 
@@ -40,6 +41,7 @@
                 <option value="black">Black Soil</option>
                 <option value="alluvial">Alluvial Soil</option>
                 <option value="sandy">Sandy Soil</option>
+                <option value="loamy">Loamy Soil</option>
                 <option value="clay">Clay Soil</option>
             </select>
 
@@ -71,28 +73,27 @@
 
 
             <label>Previous Crop</label>
-            <input type="text" id="previousCrop"
-                   placeholder="Example: Groundnut" required>
+            <input type="text" id="previousCrop" placeholder="Example: Groundnut" required>
 
 
             <button type="submit">
                 🌱 Analyze My Farm
             </button>
 
-        </form> 
+        </form>
 
         <div id="recommendation" style="display: none;">
 
-    <h2>🌾 Crop Recommendation</h2>
+            <h2>🌾 Crop Recommendation</h2>
 
-    <div class="recommendation-card">
-        <p id="recommendationText"></p>
-    </div> 
-                       
-</div>                                          
- 
+            <div class="recommendation-card">
+                <p id="recommendationText"></p>
+            </div>
+
+        </div>
+
     </div>
-  <script src="Dashboard.js"></script>
-</body>   
-</html>    
+    <script src="Dashboard.js"></script>
+</body>
 
+</html>
