@@ -1,111 +1,141 @@
 """
 services/recommendation_service.py
-------------------------------------
-Business logic for crop recommendations.
+----------------------------------
+AI-powered crop recommendation service.
 
-ARCHITECTURE NOTE:
-    This service provides the interface between the route layer and the
-    recommendation engine. The current implementation uses a simple
-    rule-based prototype engine.
-
-    FUTURE INTEGRATION POINT:
-    When another team member provides a trained AI/ML model, replace
-    the body of `get_crop_recommendations()` with a call to the ML model.
-    The function signature and return type should remain the same so the
-    route layer does not need to change.
-
-DISCLAIMER:
-    The current logic is a rule-based prototype. It is NOT a trained
-    AI/ML model and should not be presented as one.
+This service connects the FastAPI backend with the reusable
+recommendation engine in ai/recommendation_engine.py.
 """
 
+import json
+from pathlib import Path
 from typing import List
 
-from data.crop_data import CROPS
 from models.recommendation import RecommendationInput, CropRecommendation
+from ai.recommendation_engine import (
+    calculate_overall_score,
+    generate_reason,
+)
 
 
-def get_crop_recommendations(farm: RecommendationInput) -> List[CropRecommendation]:
+# Load AI crop dataset
+CROP_DATA_PATH = (
+    Path(__file__).resolve().parents[2]
+    / "ai"
+    / "data"
+    / "crops.json"
+)
+
+with open(CROP_DATA_PATH, "r", encoding="utf-8") as file:
+    AI_CROPS = json.load(file)
+
+
+def get_crop_recommendations(
+    farm: RecommendationInput,
+) -> List[CropRecommendation]:
     """
-    Generate crop recommendations for the given farm data.
+    Generate crop recommendations using the AI recommendation engine.
 
-    Current implementation: rule-based prototype that scores each supported
-    crop against the farm's soil type, pH, water availability, season, and
-    budget.
+    The engine evaluates:
+    - Soil type
+    - Soil pH
+    - Water availability
+    - Season
 
-    Returns a list of CropRecommendation objects sorted by suitability score
-    (highest first).
+    Economic estimates are calculated using the existing backend
+    crop dataset.
     """
+
     results: List[CropRecommendation] = []
 
-    for crop_name, crop in CROPS.items():
-        score = 0
-        reasons = []
+    for crop in AI_CROPS:
 
-        # --- Season match ---
-        if farm.season.lower() in crop["suitable_seasons"]:
-            score += 30
-            reasons.append(f"suitable for {farm.season} season")
-        else:
-            reasons.append(f"not ideal for {farm.season} season")
+        # Build farmer data expected by the AI engine
+        farmer = {
+            "location": farm.location,
+            "area": farm.area,
+            "soil_type": farm.soil_type,
+            "soil_ph": farm.soil_ph,
+            "water_availability": farm.water_availability,
+            "budget": farm.budget,
+            "season": farm.season,
+        }
 
-        # --- Soil type match ---
-        if farm.soil_type.lower() in [s.lower() for s in crop["suitable_soils"]]:
-            score += 25
-            reasons.append(f"grows well in {farm.soil_type} soil")
-        else:
-            reasons.append(f"not optimal for {farm.soil_type} soil")
+        # AI suitability score
+        suitability_score = calculate_overall_score(
+            farmer,
+            crop,
+        )
 
-        # --- pH match ---
-        if crop["ideal_ph_min"] <= farm.soil_ph <= crop["ideal_ph_max"]:
-            score += 20
-            reasons.append(f"soil pH {farm.soil_ph} is within ideal range")
-        elif abs(farm.soil_ph - crop["ideal_ph_min"]) <= 0.5 or abs(farm.soil_ph - crop["ideal_ph_max"]) <= 0.5:
-            score += 10
-            reasons.append(f"soil pH {farm.soil_ph} is close to ideal range")
-        else:
-            reasons.append(f"soil pH {farm.soil_ph} is outside ideal range")
+        # AI-generated reasons
+        reasons = generate_reason(
+            farmer,
+            crop,
+        )
 
-        # --- Water availability match ---
-        water_map = {"low": 1, "medium": 2, "high": 3}
-        farm_water = water_map.get(farm.water_availability.lower(), 2)
-        crop_water = water_map.get(crop["water_requirement"].lower(), 2)
-        if farm_water >= crop_water:
-            score += 15
-            reasons.append(f"water availability is sufficient")
-        else:
-            reasons.append(f"water availability may be insufficient for this crop")
+        # Find matching economic data from backend dataset
+        crop_name = crop["name"]
 
-        # --- Budget check ---
-        cost_per_acre = crop["estimated_cost_per_acre_inr"]
+        from data.crop_data import CROPS
+
+        backend_crop = CROPS.get(crop_name)
+
+        if backend_crop is None:
+            continue
+
+        # Economic calculations
+        cost_per_acre = backend_crop[
+            "estimated_cost_per_acre_inr"
+        ]
+
         total_cost = cost_per_acre * farm.area
-        if farm.budget >= total_cost:
-            score += 10
-            reasons.append(f"within budget")
-        elif farm.budget >= total_cost * 0.8:
-            score += 5
-            reasons.append(f"slightly over budget — manageable")
-        else:
-            reasons.append(f"budget may be insufficient for full area")
 
-        # Build economics estimates
-        yield_total = crop["estimated_yield_per_acre_quintals"] * farm.area
-        revenue = yield_total * crop["estimated_market_price_per_quintal_inr"]
+        yield_total = (
+            backend_crop["estimated_yield_per_acre_quintals"]
+            * farm.area
+        )
+
+        revenue = (
+            yield_total
+            * backend_crop["estimated_market_price_per_quintal_inr"]
+        )
+
         profit = revenue - total_cost
 
         results.append(
             CropRecommendation(
                 crop=crop_name,
-                suitability_score=min(score, 100),
-                reason="; ".join(reasons),
-                estimated_yield_per_acre=crop["estimated_yield_per_acre_quintals"],
-                estimated_cost_inr=round(total_cost, 2),
-                estimated_revenue_inr=round(revenue, 2),
-                estimated_profit_inr=round(profit, 2),
-                risk_level=crop["risk_level"],
+                suitability_score=round(
+                    suitability_score
+                ),
+                reason="; ".join(reasons)
+                if reasons
+                else "Crop evaluated based on farm conditions",
+                estimated_yield_per_acre=backend_crop[
+                    "estimated_yield_per_acre_quintals"
+                ],
+                estimated_cost_inr=round(
+                    total_cost,
+                    2,
+                ),
+                estimated_revenue_inr=round(
+                    revenue,
+                    2,
+                ),
+                estimated_profit_inr=round(
+                    profit,
+                    2,
+                ),
+                risk_level=backend_crop[
+                    "risk_level"
+                ],
             )
         )
 
-    # Sort by suitability score descending
-    results.sort(key=lambda r: r.suitability_score, reverse=True)
+    # Highest AI suitability first
+    results.sort(
+        key=lambda r: r.suitability_score,
+        reverse=True,
+    )
+
     return results
